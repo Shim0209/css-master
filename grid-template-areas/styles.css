@@ -1,0 +1,46 @@
+.grid {
+    display: grid;
+    /* auto는 가능한 만큼 크게 설정됨 */
+    grid-template-columns: auto 100px;
+
+    /* repeat(개수, 크기)을 사용해서 반복 */
+    grid-template-rows: 50px repeat(2, 100px) 50px;
+    gap: 5px;
+
+    /*
+        네이밍해준 grid-area를 그리드행렬에 어떤식으로 배치할지 설정
+    */
+    grid-template-areas: 
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+}
+
+.header {
+    background-color: #2ecc71;
+
+    /* grid-template-areas에 사용하기 위해 네이밍을 해준다 */
+    grid-area: header;
+}
+
+.content {
+    background-color: #3498db;
+
+    /* grid-template-areas에 사용하기 위해 네이밍을 해준다 */
+    grid-area: content;
+}
+
+.nav {
+    background-color: #8e44ad;
+
+    /* grid-template-areas에 사용하기 위해 네이밍을 해준다 */
+    grid-area: nav;
+}
+
+.footer {
+    background-color: #f39c12;
+
+    /* grid-template-areas에 사용하기 위해 네이밍을 해준다 */
+    grid-area: footer;
+}

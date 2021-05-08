@@ -1,0 +1,54 @@
+.grid {
+    display: grid;
+    /*
+        fr(fraction)은 가능한 공간을 전부 채워준다.
+        개수와 배율만 정해주면된다.
+        
+        예를들어 행을 4개로 나누고 1번째 요소가 2배로 크게 하고싶다면
+        grid-template-columns: 2fr 1fr 1fr 1fr;을 해주면된다.    
+
+        grid-template-rows도 똑같이 해주면된다.
+        단, 높이를 설정해줘야 한다. 가능한 공간을 채워줘야 하는데
+        높이가 없으면 가능한 공간이 0 라서 동작을 안한다.
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    */
+    
+    gap: 10px;
+    height: 100vh;
+
+    /*
+        grid-template: 
+            "row요소설정" row길이설정
+            "row요소설정" row길이설정 
+            / 행의 각 요소 크기설정
+        ;
+    */
+    grid-template: 
+        "header header header header" 1fr
+        "content content content nav" 2fr
+        "footer footer footer footer" 1fr 
+        / 1fr 1fr 1fr 1fr;
+    ;
+}
+
+.header {
+    background-color: #2ecc71;
+    grid-area: header;
+}
+
+.content {
+    background-color: #3498db;
+    grid-area: content;
+}
+
+.nav {
+    background-color: #8e44ad;
+    grid-area: nav;
+}
+
+.footer {
+    background-color: #f39c12;
+    grid-area: footer;
+}

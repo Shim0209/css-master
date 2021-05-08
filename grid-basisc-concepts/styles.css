@@ -1,0 +1,32 @@
+.father {
+    /* grid */
+    display: grid;
+
+    /* 
+        - 한 행에 몇개의 열을 넣을지 지정
+        - 각 열의 width값 설정
+    */
+    grid-template-columns: 100px 100px 100px;
+    
+    /*
+        - 한 열에 몇개의 행을 넣을지 지정
+        - 각 행의 height값 설정
+    */
+    grid-template-rows: 100px 100px 100px;
+
+    /*
+        - 행과 열의 간격을 동시에 설정
+    */
+    gap: 20px;
+
+    /*
+        row-gap : 행간 간격 설정
+        column-gap : 열간 간격 설정
+    */
+}
+
+.child {
+    background-color: tomato;
+    font-size: 50px;
+    color: white;
+}

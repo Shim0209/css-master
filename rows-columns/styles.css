@@ -1,0 +1,62 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+}
+
+.header {
+    background-color: #2ecc71;
+    /* 
+        숫자는 column의 line 수를 가르킨다.
+        즉, 첫번째 줄에서 시작해서 5번째 줄에서 끝난다는 뜻이다.
+    */
+    
+    /*
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-column: 시작 / 끝 으로 줄여서 사용할 수 있음
+    */
+
+    /*
+    grid-column: 1 /  5;
+    -1 은 반대쪽에서부터 line 개수를 카운트 한다.
+    예를들어 -2 이면 우측 두번째 line 이라는 뜻이다.
+    */
+
+    /*
+    grid-column: 1 /  -1;
+    'span 개수'을 사용해서 표현할 수 있다. 
+    */
+
+    grid-column: span 4;
+}
+
+.content {
+    background-color: #3498db;
+    grid-column: span 3;
+    /*
+        숫자는 row의 line 수를 가르킨다.
+        즉, 첫번째 줄에서 시작헤서 4번째 줄에서 끝난다는 뜻이다.
+    */
+    /*
+        grid-row-start: 2;
+        grid-row-end: 4;
+    */
+
+    /*
+        grid-row: 2 / span 2;
+        위와같이 시작줄을 지정할수도 있다. 
+    */
+    grid-row: span 2;
+}
+
+.nav {
+    background-color: #8e44ad;
+    grid-row: span 2;
+}
+
+.footer {
+    background-color: #f39c12;
+    grid-column: span 4;
+}
