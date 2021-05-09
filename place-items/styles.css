@@ -1,0 +1,46 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /*
+        <justify-items: stretch>
+        - grid 범위안, 수평에서 움직임
+        - defalut : stretch 
+        - start, center, end 등
+
+        <align-items: center>
+        - grid 범위안, 수직에서 움직임
+        - defalut : stretch
+        - start, center, end 등
+    
+        <place-items>
+        - justify-items + align-items
+    */
+    place-items: center center;
+
+    gap: 10px;
+    height: 100vh;
+}
+
+.header {
+    background-color: #2ecc71;
+    /*
+        align-self 
+        justify-self
+        *자식엘리먼트에 적용
+        place-self = align-self + justify-self
+        place-self: center center;
+    */
+}
+
+.content {
+    background-color: #3498db;
+}
+
+.nav {
+    background-color: #8e44ad;
+}
+
+.footer {
+    background-color: #f39c12;
+}
