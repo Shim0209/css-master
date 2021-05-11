@@ -2,7 +2,10 @@
     display: grid;
     gap: 10px;
     color: white;
-    grid-template-columns: repeat(4, 1fr);
+    /*
+        minmax(최소크기, 최대크기)
+    */
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     grid-template-rows: repeat(4, 200px);
     /*
         <grid-auto-rows>

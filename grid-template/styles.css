@@ -20,9 +20,9 @@
 
     /*
         grid-template: 
-            "row요소설정" row길이설정
-            "row요소설정" row길이설정 
-            / 행의 각 요소 크기설정
+            "row요소설정" 높이설정
+            "row요소설정" 높이설정 
+            / 행의 각 요소 가로크기설정
         ;
     */
     grid-template: 
